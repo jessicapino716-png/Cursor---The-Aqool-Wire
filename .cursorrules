@@ -1,0 +1,21 @@
+I am the Non-Technical Founder/CEO of 'The Aqool Wire'.
+The Project: A "Bloomberg Terminal" for Saudi Arabia's AI Ecosystem.
+The Stack: Next.js 14 (App Router), Tailwind, Shadcn UI, Supabase.
+The Team: My CTO is Kayode. He handles the Backend (Supabase/Python/RAG). I handle the Frontend Vision using AI tools (Cursor/v0).
+Current Status:
+We have scaffolded a Next.js app in Cursor.
+We are using a dark mode "Financial Terminal" aesthetic (JetBrains Mono font, Neon Green accents).
+We are strictly mapped to Kayode's backend schema:
+funding_flows table (source_institution, destination_sector, amount, evidence_snippet).
+market_gaps table (qualitative_gap_level, numeric_gap_estimate).
+We are currently running on Mock Data locally because we haven't connected the real API keys yet.
+My Role: I am the architect. I prompt you to build components. You write the code.
+Current Goal: We are polishing the UI to look "Investor Ready" before pushing to GitHub for Kayode to inspect.
+## WORKFLOW RULES (ALWAYS FOLLOW THESE)
+
+1. **The "Definition of Done":**
+   Whenever you (the AI) complete a coding task or fix a bug, you MUST end your response by asking:
+   > "Task complete. Should I update `AI_CONTEXT.md` to reflect these changes?"
+
+2. **Context Awareness:**
+   Before writing new code, always check `AI_CONTEXT.md` to see which Phase we are in. Do not suggest code that contradicts the current Phase.
