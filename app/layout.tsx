@@ -1,6 +1,15 @@
-import type { Metadata } from 'next'
-import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import type { Metadata } from 'next'
+import { Inter, JetBrains_Mono } from 'next/font/google'
+import { CurrencyProvider } from '@/context/CurrencyContext'
+import { TooltipProvider } from '@/components/ui/tooltip'
+import { cn } from '@/lib/utils'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -20,7 +29,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`min-h-screen bg-gray-900 ${jetbrainsMono.variable}`}>{children}</body>
+      <body className={cn("min-h-screen bg-[#0c0a09] text-foreground font-sans antialiased", inter.variable, jetbrainsMono.variable)}>
+        <CurrencyProvider>
+          <TooltipProvider>
+            {children}
+          </TooltipProvider>
+        </CurrencyProvider>
+      </body>
     </html>
   )
 }
